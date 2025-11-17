@@ -50,69 +50,77 @@ body {
 /* hero */
 .hero-wrapper {
   position: relative;
+  height: 100vh; /* FULL LAYAR */
+  min-height: 100vh;
   width: 100%;
-  min-height: 100vh; /* responsive, tidak kepotong */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 20px; /* biar teks ga nabrak kanan kiri */
-  box-sizing: border-box;
   overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  /* FIX BUG CHROME MOBILE ADDRESS BAR */
+  height: 100svh;
+  min-height: 100svh;
 }
 
 .hero-video {
   position: absolute;
-  top: 50%;
-  left: 50%;
+  inset: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  transform: translate(-50%, -50%);
   z-index: -2;
 }
 
 .hero-overlay {
   position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: rgba(0, 0, 0, 0.4); /* biar teks keliatan */
+  inset: 0;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
   z-index: -1;
 }
 .hero-content {
+  position: relative;
+  z-index: 10;
   text-align: center;
-  color: white;
+  color: #fff;
+  padding: 20px;
 }
 /* GOLD MEWAH PREMIUM */
 .hero-title {
-  font-size: clamp(2.2rem, 8vw, 4rem); /* besar di PC, mengecil di HP */
-  line-height: 1.15;
-  margin: 0 0 10px;
+  font-size: 3.2rem;
+  margin-bottom: 6px;
   font-weight: 700;
+
+  /* warna gold elegan */
+  color: #d6b980;
+
+  /* depth halus biar terlihat kelas */
+  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
+
 /* tanggal gold lembut */
 .hero-date {
-  font-size: clamp(1rem, 4vw, 1.4rem);
-  margin-bottom: 20px;
+  font-size: 1.2rem;
+  margin-bottom: 18px;
+  color: #e2cfa3;
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
 }
 
 /* HERO BUTTON */
 .hero-button {
-  background: white;
+  background: #fff;
   color: #000;
-  padding: 12px 28px;
-  font-size: clamp(1rem, 4vw, 1.2rem);
+  padding: 10px 30px;
   border-radius: 40px;
   font-weight: 600;
   border: none;
-  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
-  cursor: pointer;
-  transition: 0.3s;
+  transition: 0.3s ease;
 }
 
 .hero-button:hover {
   transform: scale(1.05);
+  background: #f4f4f4;
 }
 
 /* layout card */
@@ -221,18 +229,20 @@ body {
 }
 
 /* responsive tweaks */
-@media (max-width: 768px) {
-  .hero-wrapper {
-    height: 60vh;
-    min-height: 420px;
-  }
-  .card-center {
-    margin: -60px 18px 24px;
-  }
+
+.hero-wrapper {
+  height: 100svh;
+  min-height: 100svh;
 }
+
+.card-center {
+  margin: -60px 18px 24px;
+}
+
 .page-content {
-  padding-top: 100px;
+  background: linear-gradient(180deg, #000 0%, #000 5%, #f8f3eb 30%);
 }
+
 .page-transition {
   width: 100%;
   min-height: 100vh; /* WAJIB */
