@@ -22,7 +22,7 @@ export default function Home() {
       <div className="card-center">
         {/* === OPENING SECTION ELEGAN === */}
         <div
-          className="blur-card scroll-animate"
+          className="blur-card scroll-animate active"
           style={{ marginBottom: 25, padding: "20px 16px" }}
         >
           <h3
@@ -61,7 +61,7 @@ export default function Home() {
         {/* === NAMA PASANGAN + TANGGAL DIPINDAH KE ATAS === */}
         <div className="blur-card">
           <h2 className="title-font text-center" style={{ marginBottom: 6 }}>
-            Nama Pasangan
+            Rizki & Rizka
           </h2>
           <p className="text-center text-muted">
             Akad & Resepsi — 20 November 2025
