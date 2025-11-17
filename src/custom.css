@@ -125,9 +125,7 @@ body {
 
 /* layout card */
 .card-center {
-  max-width: 680px;
-  margin: 0 auto;
-  padding-bottom: 40px;
+  margin: -20px 18px 24px;
 }
 
 /* blur card */
@@ -224,8 +222,7 @@ body {
   transition: all 0.7s ease;
 }
 .scroll-animate.active {
-  opacity: 1;
-  transform: translateY(0);
+  opacity: 1 !important;
 }
 
 /* responsive tweaks */
