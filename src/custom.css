@@ -50,77 +50,69 @@ body {
 /* hero */
 .hero-wrapper {
   position: relative;
-  height: 100vh; /* FULL LAYAR */
-  min-height: 100vh;
   width: 100%;
-  overflow: hidden;
-
+  min-height: 100vh; /* responsive, tidak kepotong */
   display: flex;
-  align-items: center;
   justify-content: center;
-
-  /* FIX BUG CHROME MOBILE ADDRESS BAR */
-  height: 100svh;
-  min-height: 100svh;
+  align-items: center;
+  padding: 20px; /* biar teks ga nabrak kanan kiri */
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 .hero-video {
   position: absolute;
-  inset: 0;
+  top: 50%;
+  left: 50%;
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transform: translate(-50%, -50%);
   z-index: -2;
 }
 
 .hero-overlay {
   position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.25));
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.4); /* biar teks keliatan */
   z-index: -1;
 }
 .hero-content {
-  position: relative;
-  z-index: 10;
   text-align: center;
-  color: #fff;
-  padding: 20px;
+  color: white;
 }
 /* GOLD MEWAH PREMIUM */
 .hero-title {
-  font-size: 3.2rem;
-  margin-bottom: 6px;
+  font-size: clamp(2.2rem, 8vw, 4rem); /* besar di PC, mengecil di HP */
+  line-height: 1.15;
+  margin: 0 0 10px;
   font-weight: 700;
-
-  /* warna gold elegan */
-  color: #d6b980;
-
-  /* depth halus biar terlihat kelas */
-  text-shadow: 0 2px 6px rgba(0, 0, 0, 0.35);
 }
-
 /* tanggal gold lembut */
 .hero-date {
-  font-size: 1.2rem;
-  margin-bottom: 18px;
-  color: #e2cfa3;
-  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.25);
+  font-size: clamp(1rem, 4vw, 1.4rem);
+  margin-bottom: 20px;
 }
 
 /* HERO BUTTON */
 .hero-button {
-  background: #fff;
+  background: white;
   color: #000;
-  padding: 10px 30px;
+  padding: 12px 28px;
+  font-size: clamp(1rem, 4vw, 1.2rem);
   border-radius: 40px;
   font-weight: 600;
   border: none;
-  transition: 0.3s ease;
+  box-shadow: 0 4px 12px rgba(255, 255, 255, 0.3);
+  cursor: pointer;
+  transition: 0.3s;
 }
 
 .hero-button:hover {
   transform: scale(1.05);
-  background: #f4f4f4;
 }
 
 /* layout card */
